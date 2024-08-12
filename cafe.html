@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+
+        .background {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('moon.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left-image {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(0, -50%);
+            max-width: 500px;
+            animation: leftImageAnimation 2s ease-in-out infinite alternate;
+        }
+
+        .right-content {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            text-align: center;
+            transform: translate(0, -50%);
+        }
+
+        .line1 {
+    font-size: 70px;
+    font-weight:200;
+    color: #D2B48C;
+    font-family: 'Lucida Handwriting', serif;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 0; /* Add this line to reduce the bottom margin */
+    white-space: nowrap;
+    animation: typewriter 2s steps(40) 1s 1 normal both;
+    
+}
+
+.line2 {
+    font-size: 40px;
+    font-weight: normal;
+    color: #D2B48C;
+    font-family: 'Papyrus', sans-serif;
+    margin-top: 0; /* Add this line to reduce the top margin */
+    animation: fadeIn 2s ease-in-out 2s 1 normal both;
+}
+        .caption {
+            font-size: 20px;
+            color: #D2B48C;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out 2s 1 normal both;
+            font-family:"Garamond", monospace;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+	    color: #D2B48C;
+        }
+
+        .login-input-small {
+            width: 120px;
+            margin-right: 10px;
+	    color: #D2B48C;
+        }
+
+        .login-button-small {
+            width: 80px;
+	    
+        }
+#emailInput {
+    background-color: #00000; /* This is a light yellow color, you can change it to your desired color */
+}
+
+
+        #validationMessages {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        @keyframes leftImageAnimation {
+            0% {
+                transform: translate(0, -50%);
+            }
+            100% {
+                transform: translate(10px, -50%);
+            }
+        }
+       @keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    </style>
+    <title>Restaurant Website</title>
+</head>
+<body>
+    <div class="background">
+        <img src="cafe.png" alt="Left Image" class="left-image">
+        <div class="right-content">
+            <p class="line1">SAVOUR SLOT</p>
+            <p class="line2">Restaurant</p>
+            <p class="caption">#SavorTheMoment</p>
+            <div class="login-form" id="loginForm">
+                <input type="email" placeholder="Email" class="login-input-small" id="emailInput">
+                <input type="password" placeholder="Password" class="login-input-small" id="passwordInput">
+                <button class="login-button-small" onclick="validateForm()">Login</button>
+            </div>
+            <div id="validationMessages"></div>
+        </div>
+    </div>
+
+    <script>
+    function validateForm() {
+        var email = document.getElementById("emailInput").value;
+        var password = document.getElementById("passwordInput").value;
+
+        document.getElementById("validationMessages").innerHTML = "";
+
+        // Regular expression to check for a valid email format
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email === "") {
+            displayValidationMessage("Enter your email");
+            return;
+        }
+
+        // Check if the email follows a valid format
+        if (!emailRegex.test(email)) {
+            displayValidationMessage("Enter a valid email address");
+            return;
+        }
+
+        if (password === "") {
+            displayValidationMessage("Enter your password");
+            return;
+        }
+
+        alert("Login successful! Welcome");
+
+        window.location.href = 'index.html';
+    }
+
+    function displayValidationMessage(message) {
+        document.getElementById("validationMessages").innerHTML = message;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Bites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <h1 class="logo"><a style="text-decoration:none;color:black;"href="#home">SAVOUR SLOT</a></h1>
+        </div>
+    </nav>
+    
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home">SAVOUR SLOT</h1>
+            <p>Cafe Comforts and Sweet Retreats. </p>
+            <a href="#food-menu" class="btn btn-primary">Explore Menu</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About Us</p>
+                <h2>Welcome to Savour Slot - A Culinary Journey</h2>
+                <p>
+                    "SAVOUR SLOT" is not just a name; it's a declaration of our commitment to savoring every moment.Nestled in the heart of the city, Salvour Slot beckons you into a world where flavors dance and aromas enchant. Our establishment is not just a restaurant; it's an experience, an ode to the artistry of gastronomy.
+                   Step into a realm where the ambiance is as rich as the dishes we serve. The background, adorned with the soothing image of a moonlit scene, sets the stage for an unforgettable dining adventure.
+                </p>
+<p>Savour Slot Cafe prides itself on offering a diverse menu that caters to a variety of tastes. From carefully crafted coffee beverages, including specialty blends and espresso drinks, to an array of mouthwatering sweet treats, the menu is designed to tantalize the taste buds.</p>
+                
+            </div>
+            <div class="about-img">
+                <img src="bgg.png" alt="food" />
+            </div>
+        </div>
+    </section>
+    
+    <section id="food-menu">
+        <h2 class="food-menu-heading">Food Menu</h2>
+        <div class="food-menu-container container">
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="mocha-latte-12.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Mocha Latte</h2>
+                    <p>
+                        A classic coffee drink that combines espresso, steamed milk, and chocolate syrup.
+                    </p>
+                    <p class="food-price">Price: &#8377; 150</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Mocha Latte', 150)">Add to Cart</button>
+
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="coffee-smoothie-2.jpg" alt="error" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Chocolate Coffee Smoothie</h2>
+                    <p>
+                        Blend together cold brew coffee, chocolate protein powder, banana, and ice for a refreshing and energizing smoothie.
+                    </p>
+                    <p class="food-price">Price: &#8377; 180</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Coffee Smoothie', 180)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="Coffee-Truffles-Feature.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Chocolate Coffee Truffles</h2>
+                    <p>
+                        Make truffles by combining melted chocolate with strong brewed coffee. Roll the mixture into small balls and coat them in cocoa powder or crushed nuts.
+                    </p>
+                    <p class="food-price">Price: &#8377; 180</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Coffee Truffles', 180)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="IMG_9778-scaled.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Coffee and Chocolate Cake</h2>
+                    <p>
+                        Bake a rich chocolate cake with a hint of coffee flavor. You can also add a coffee-infused frosting for an extra kick.
+                    </p>
+                    <p class="food-price">Price: &#8377; 180</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Coffee and Chocolate Cake', 180)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="espresso-cookie-2.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Chocolate Espresso Cookies</h2>
+                    <p>
+                        Combine cocoa powder and finely ground espresso beans in a cookie dough recipe to create deliciously caffeinated cookies.
+                    </p>
+                    <p class="food-price">Price: &#8377; 240</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Espresso Cookies', 240)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="download.jpeg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Coffee Chocolate Tiramisu</h2>
+                    <p>
+                        A twist on the classic Italian dessert, Tiramisu, incorporating layers of coffee-soaked ladyfingers and a chocolate mascarpone cream.
+                    </p>
+                    <p class="food-price">Price: &#8377; 260</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Coffee Chocolate Tiramisu', 260)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="mocha-ice-cream-sl-257433-x.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Mocha Ice Cream</h2>
+                    <p>
+                        Make homemade coffee chocolate ice cream by adding finely ground coffee or espresso to a chocolate ice cream base.
+                    </p>
+                    <p class="food-price">Price: &#8377; 200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Mocha Ice Cream', 200)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="59253127.webp" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Chocolate Coffee Pudding</h2>
+                    <p>
+                        Prepare a chocolate pudding infused with coffee for a decadent and creamy dessert.
+                    </p>
+                    <p class="food-price">Price: &#8377; 200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Coffee Pudding', 200)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="coffee-cocktail-martini.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Coffee Chocolate Martini</h2>
+                    <p>
+                        Combine vodka, coffee liqueur, and chocolate syrup for a delightful coffee-flavored martini.
+                    </p>
+                    <p class="food-price">Price: &#8377; 40</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Coffee Chocolate Martini', 40)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="IMG_7193.webp" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Chocolate Coffee Energy Bites</h2>
+                    <p>
+                        Mix together rolled oats, almond butter, honey, cocoa powder, and a shot of espresso to create energy bites.
+                    </p>
+                    <p class="food-price">Price: &#8377; 120</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Coffee Energy Bites', 120)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="Affogato_0-SQ.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Affogato</h2>
+                    <p>
+                        A simple yet elegant dessert that involves pouring a shot of hot espresso over a scoop of chocolate ice cream or gelato.
+                    </p>
+                    <p class="food-price">Price: &#8377; 150</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Affogato', 150)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="vegan-chocolate-pancakes.jpg" alt="" />
+                </div>
+                <div class="food-description">
+                    <h2 class="food-titile">Coffee Chocolate Pancakes</h2>
+                    <p>
+                        Enhance your pancake batter with cocoa powder and instant coffee for a delicious breakfast treat.
+                    </p>
+                    <p class="food-price">Price: &#8377; 80</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Coffee Chocolate Pancakes', 80)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+    
+
+    <section id="cart">
+        <h2 class="cart-heading">Cart</h2>
+        <div class="cart-container container">
+            <ul id="cart-list">
+            </ul>
+            <p>Total: <span id="total">0</span></p>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
+            </div>
+
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="E-Mail" />
+                <textarea cols="30" rows="6" placeholder="Type Your Message"></textarea>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h2>Restraunt &copy; all rights reserved</h2>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js">
+    </script>
+
+</html>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <h1>Thanks For The Order</h1>
+    <h2>Your order is being prepared</h2>
+    <h2 id="abc">Order Number :</h2>
+    <table id="orderTable">
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+      </tr>
+    </table>
+    <script src="app.js"></script>
+    <script>
+      generateOrderNumber();
+      const s2 = localStorage.getItem("obj");
+      const c = JSON.parse(s2);
+      var grandTotal = 0;
+      for (var i = 0; i < c.length; i++) {
+        const name = c[i].name;
+        const price = c[i].price;
+        const qty = c[i].quantity;
+        const tot = price * qty;
+        const table = document.getElementById("orderTable");
+
+        const row = table.insertRow(-1);
+        const nameCell = row.insertCell(0);
+        nameCell.innerHTML = name;
+        const priceCell = row.insertCell(1);
+        priceCell.innerHTML = "₹" + price;
+        const qtyCell = row.insertCell(2);
+        qtyCell.innerHTML = qty;
+        const totCell = row.insertCell(3);
+        totCell.innerHTML = "₹" + tot;
+        grandTotal += tot;
+      }
+      const table = document.getElementById("orderTable");
+      const totalRow = table.insertRow(-1);
+      totalRow.innerHTML = `<td colspan="3" style="text-align: right; font-weight: bold;">Grand Total:</td><td style="font-weight: bold;">₹${grandTotal}</td>`;
+    </script>
+  </body>
+</html>
